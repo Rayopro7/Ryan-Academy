@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Fundamentals - Ryan's Academy</title>
+    <link rel="stylesheet" href="assets/css/style.css"> <!-- Link to the same CSS -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ryan's Academy</h1>
+            <p>Your Gateway to Mastering Computer Science</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="index.html#courses">All Courses</a>
+            <a href="#details">Course Details</a>
+            <a href="#syllabus">Syllabus</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="details" class="card">
+            <h2>Web Development Fundamentals</h2>
+            <p>Ready to build your own websites? This course covers the essential building blocks of the modern web: HTML, CSS, and JavaScript. Understand how websites are structured, styled, and made interactive.</p>
+            <p>Perfect for aspiring front-end developers or anyone curious about how the web works. No prior web development experience is needed, though basic computer literacy is helpful.</p>
+             <!-- Add status indicator here -->
+             <p><strong>Status:</strong> <span class="status available">Available Now!</span></p>
+            <h3>What You'll Learn:</h3>
+            <ul>
+                <li>Structuring web pages with HTML5.</li>
+                <li>Styling elements effectively with CSS3 (including layouts like Flexbox/Grid).</li>
+                <li>Adding interactivity with fundamental JavaScript concepts.</li>
+                <li>Understanding the relationship between HTML, CSS, and JS.</li>
+                <li>Best practices for writing clean and maintainable code.</li>
+            </ul>
+        </section>
+
+        <section id="syllabus" class="card">
+            <h2>Course Syllabus Preview</h2>
+            <p>Explore the core technologies that power the websites you use every day:</p>
+            <div class="syllabus-modules">
+                 <!-- Update module classes if they are now available, or leave as coming-soon-module if only the course is available but not all modules -->
+                <div class="module"> <!-- Example: Changed from coming-soon-module -->
+                    <a href="web-dev-lessons/module-1-intro/lesson-1-intro.html" style="text-decoration: none; color: inherit;">
+                        <h4>Module 1: Introduction to the Web</h4>
+                        <p>How websites work, client-server model, and essential developer tools.</p>
+                        <span style="font-size: 0.8em; color: #4CAF50;">Click to start lesson</span>
+                    </a>
+                </div>
+                <div class="module"> <!-- Example: Changed from coming-soon-module -->
+                    <h4>Module 2: HTML Essentials</h4>
+                    <p>Structuring content with tags, elements, attributes, forms, and semantic HTML.</p>
+                </div>
+                <div class="module"> <!-- Example: Changed from coming-soon-module -->
+                    <h4>Module 3: CSS Styling</h4>
+                    <p>Selectors, properties, the box model, colors, typography, and basic layouts.</p>
+                </div>
+                <div class="module coming-soon-module"> <!-- Example: Still coming soon -->
+                    <h4>Module 4: Advanced CSS & Layouts</h4>
+                    <p>Flexbox, Grid, responsive design techniques, and CSS transitions/animations.</p>
+                </div>
+                 <div class="module coming-soon-module"> <!-- Example: Still coming soon -->
+                    <h4>Module 5: JavaScript Fundamentals</h4>
+                    <p>Variables, data types, operators, control flow, functions, and DOM manipulation basics.</p>
+                </div>
+                 <div class="module coming-soon-module"> <!-- Example: Still coming soon -->
+                    <h4>Module 6: Putting It All Together</h4>
+                    <p>Building a simple, interactive web page combining HTML, CSS, and JavaScript.</p>
+                </div>
+            </div>
+             <!-- Update status text if needed -->
+             <span class="status available" style="display: block; margin-top: 1rem; text-align: center;">Core modules available now! Full syllabus details coming soon.</span>
+        </section>
+
+         <section id="start-now" class="card call-to-action">
+             <h2>Build the Web!</h2>
+             <p>This exciting course is now available! Start learning the fundamentals of web development today and bring your ideas to life online.</p>
+
+             <!-- Placeholder for Advanced Notes/First Lesson -->
+             <div style="text-align: left; margin-top: 1.5rem; padding: 1rem; background-color: #fff; border-radius: 5px; border: 1px solid #eee;">
+                 <h4>Advanced Concepts Preview:</h4>
+                 <p>To truly master web development, you'll eventually explore topics like:</p>
+                 <ul>
+                     <li><strong>JavaScript Frameworks:</strong> Libraries like React, Vue, or Angular for building complex user interfaces.</li>
+                     <li><strong>Backend Development:</strong> Using languages like Node.js, Python (Django/Flask), or PHP to handle server logic and databases.</li>
+                     <li><strong>APIs (Application Programming Interfaces):</strong> How different software components communicate.</li>
+                     <li><strong>Version Control:</strong> Using Git and platforms like GitHub for collaboration and code management.</li>
+                     <li><strong>Web Performance Optimization:</strong> Techniques to make your websites load faster.</li>
+                     <li><strong>Security Best Practices:</strong> Protecting your site and user data.</li>
+                 </ul>
+                 <p><em>(Full lessons and detailed notes will guide you through these advanced areas in later modules!)</em></p>
+             </div>
+             <!-- End Placeholder -->
+
+             <div class="cta-button-container">
+                  <!-- Updated button text -->
+                  <a href="#syllabus" class="cta-button">View Course Syllabus</a>
+                 <span class="cta-note">Get started by reviewing the modules above!</span>
+             </div>
+         </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2024 Ryan's Academy. All rights reserved. | Designed with Passion
+        </div>
+    </footer>
+</body>
+</html>
