@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: HTML Essentials - Headings & Paragraphs - Ryan's Academy</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Reusing lesson content styling -->
+    <style>
+        .lesson-content {
+            padding: 2rem 2.5rem; background-color: #fff; margin: 2rem auto;
+            max-width: 900px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            line-height: 1.7;
+        }
+        .lesson-content h1 { border-bottom: 3px solid #4CAF50; padding-bottom: 0.6rem; margin-bottom: 1.8rem; font-size: 2.2rem; color: #333; }
+        .lesson-content h2 { font-size: 1.8rem; color: #1b5e20; margin-top: 2.5rem; margin-bottom: 1.2rem; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.4rem; }
+        .lesson-content h3 { font-size: 1.4rem; color: #388E3C; margin-top: 2rem; margin-bottom: 0.8rem; }
+        .lesson-content h4, .lesson-content h5, .lesson-content h6 { color: #333; margin-top: 1.5rem; margin-bottom: 0.6rem; } /* Basic styling for lower headings */
+        .lesson-content p { margin-bottom: 1.1rem; }
+        .lesson-content ul, .lesson-content ol { margin-bottom: 1.1rem; padding-left: 2rem; }
+        .lesson-content li { margin-bottom: 0.5rem; }
+        .lesson-content strong { color: #1b5e20; }
+        .lesson-content code { background-color: #f0f0f0; padding: 0.2em 0.4em; border-radius: 3px; font-family: monospace; }
+        .lesson-content pre code { display: block; background-color: #2d2d2d; color: #f0f0f0; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+        .lesson-content hr { margin: 2.5rem 0; border: 0; height: 1px; background-color: #ddd; }
+        .lesson-content .cta-button { display: inline-block; margin-top: 1.5rem; }
+        @media (max-width: 480px) {
+            .lesson-content { padding: 1.5rem 1rem; margin: 1rem auto; }
+            .lesson-content h1 { font-size: 1.8rem; }
+            .lesson-content h2 { font-size: 1.5rem; }
+            .lesson-content h3 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ryan's Academy</h1>
+            <p>Web Development Fundamentals</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="../../index.html">Home</a>
+            <a href="../../web-dev.html">Web Dev Course</a>
+            <a href="../../web-dev.html#syllabus">Syllabus</a>
+            <a href="lesson-2-html-basics.html">Previous Lesson</a> <!-- Link to Lesson 2 -->
+        </div>
+    </nav>
+
+    <main class="lesson-content">
+        <h1>Module 2: HTML Essentials</h1>
+        <h2>Lesson 3: Structuring Content with Headings and Paragraphs</h2>
+
+        <p>Now that we have the basic HTML document structure (the skeleton!), let's learn how to add the most fundamental types of visible content: <strong>headings</strong> and <strong>paragraphs</strong>. These tags are crucial for organizing your text, making it readable for users, and providing semantic meaning for browsers and search engines.</p>
+
+        <h3>Headings (`<h1>` to `<h6>`) - Organizing Your Content</h3>
+        <p>HTML provides six levels of headings, from `<h1>` (the most important or top-level heading) down to `<h6>` (the least important). Think of them like outlines in a document or chapters and sections in a book.</p>
+        <ul>
+            <li><strong>Purpose:</strong> They define the hierarchy and structure of your content. `<h1>` is typically used for the main title of the page or a major section, `<h2>` for sub-sections within that, `<h3>` for sub-sub-sections, and so on.</li>
+            <li><strong>Semantic Meaning:</strong> Using headings correctly tells browsers (and assistive technologies like screen readers) about the organization of your page. Search engines also use headings to understand the main topics of your content.</li>
+            <li><strong>Default Styling:</strong> Browsers apply default styling to headings, usually making them bold and larger than normal text, with decreasing size from `<h1>` to `<h6>`. However, you can (and often will) customize their appearance using CSS.</li>
+            <li><strong>Important Rule:</strong> You should generally only have <strong>one `<h1>` per page</strong>, representing the main topic. Use headings in logical order (don't skip levels, e.g., don't jump from an `<h2>` to an `<h4>` without an `<h3>` in between) to maintain a clear structure.</li>
+        </ul>
+
+        <p><strong>Example:</strong></p>
+        <pre><code>&lt;body&gt;
+  &lt;h1&gt;The Main Title of My Page&lt;/h1&gt;
+  &lt;p&gt;This is the introductory paragraph.&lt;/p&gt;
+
+  &lt;h2&gt;Section 1: A Major Topic&lt;/h2&gt;
+  &lt;p&gt;Content related to the first major topic.&lt;/p&gt;
+
+    &lt;h3&gt;Subsection 1.1: A Detail&lt;/h3&gt;
+    &lt;p&gt;More specific details about the first topic.&lt;/p&gt;
+
+  &lt;h2&gt;Section 2: Another Major Topic&lt;/h2&gt;
+  &lt;p&gt;Content related to the second major topic.&lt;/p&gt;
+
+    &lt;h3&gt;Subsection 2.1: Another Detail&lt;/h3&gt;
+    &lt;p&gt;Specifics about the second topic.&lt;/p&gt;
+
+      &lt;h4&gt;Sub-subsection 2.1.1: A Fine Point&lt;/h4&gt;
+      &lt;p&gt;Even more granular information.&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+        <p><em>(Note: We'll cover `<body>` in more detail later, this just shows where headings fit.)</em></p>
+
+        <h3>Paragraphs (`<p>`) - The Building Blocks of Text</h3>
+        <p>The `<p>` tag is used to define a paragraph of text. It's one of the most common HTML tags you'll use.</p>
+        <ul>
+            <li><strong>Purpose:</strong> It groups related sentences together, forming a distinct block of text.</li>
+            <li><strong>Block-Level Element:</strong> Paragraphs are "block-level" elements. This means they typically start on a new line and take up the full available width of their container.</li>
+            <li><strong>Spacing:</strong> Browsers automatically add some vertical space (margin) before and after each paragraph, separating it visually from surrounding content.</li>
+            <li><strong>Usage:</strong> Simply wrap your paragraph text within `<p>` and `</p>` tags.</li>
+        </ul>
+
+        <p><strong>Example:</strong></p>
+        <pre><code>&lt;p&gt;This is the first paragraph. It contains several sentences discussing a particular idea. Browsers will render this as a distinct block.&lt;/p&gt;
+
+&lt;p&gt;This is the second paragraph. Notice how it starts on a new line and has space separating it from the first paragraph. This helps readability.&lt;/p&gt;</code></pre>
+
+        <p>Using headings and paragraphs correctly is fundamental to creating well-structured, readable, and accessible web pages. Always think about the logical structure of your content when choosing which heading level to use.</p>
+
+        <hr>
+        <p>Great! You've learned how to structure text content. In the next lesson, we'll explore other essential tags for formatting text within your paragraphs, like making text bold or italic, and creating lists.</p>
+
+        <a href="../../web-dev.html#syllabus" class="cta-button" style="margin-right: 1rem;">Back to Syllabus</a>
+        <a href="lesson-2-html-basics.html" class="cta-button secondary" style="margin-right: 1rem;">Previous Lesson</a>
+        <!-- Add "Next Lesson" link when lesson 4 exists -->
+        <!-- <a href="lesson-4-text-formatting-lists.html" class="cta-button">Next Lesson</a> -->
+
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2024 Ryan's Academy. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
