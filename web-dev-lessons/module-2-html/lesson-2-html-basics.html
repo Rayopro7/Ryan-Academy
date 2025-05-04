@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: HTML Essentials - Basic Structure - Ryan's Academy</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <!-- Reusing similar styling from lesson 1 for consistency -->
+    <style>
+        .lesson-content {
+            padding: 2rem 2.5rem;
+            background-color: #fff;
+            margin: 2rem auto;
+            max-width: 900px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            line-height: 1.7;
+        }
+        .lesson-content h1 { border-bottom: 3px solid #4CAF50; padding-bottom: 0.6rem; margin-bottom: 1.8rem; font-size: 2.2rem; color: #333; }
+        .lesson-content h2 { font-size: 1.8rem; color: #1b5e20; margin-top: 2.5rem; margin-bottom: 1.2rem; border-bottom: 1px solid #e0e0e0; padding-bottom: 0.4rem; }
+        .lesson-content h3 { font-size: 1.4rem; color: #388E3C; margin-top: 2rem; margin-bottom: 0.8rem; }
+        .lesson-content p { margin-bottom: 1.1rem; }
+        .lesson-content ul, .lesson-content ol { margin-bottom: 1.1rem; padding-left: 2rem; }
+        .lesson-content li { margin-bottom: 0.5rem; }
+        .lesson-content strong { color: #1b5e20; }
+        .lesson-content code { background-color: #f0f0f0; padding: 0.2em 0.4em; border-radius: 3px; font-family: monospace; }
+        .lesson-content pre code { display: block; background-color: #2d2d2d; color: #f0f0f0; padding: 1rem; border-radius: 5px; overflow-x: auto; }
+        .lesson-content hr { margin: 2.5rem 0; border: 0; height: 1px; background-color: #ddd; }
+        .lesson-content .cta-button { display: inline-block; margin-top: 1.5rem; }
+        @media (max-width: 480px) {
+            .lesson-content { padding: 1.5rem 1rem; margin: 1rem auto; }
+            .lesson-content h1 { font-size: 1.8rem; }
+            .lesson-content h2 { font-size: 1.5rem; }
+            .lesson-content h3 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Ryan's Academy</h1>
+            <p>Web Development Fundamentals</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="../../index.html">Home</a>
+            <a href="../../web-dev.html">Web Dev Course</a>
+            <a href="../../web-dev.html#syllabus">Syllabus</a>
+            <a href="../module-1-intro/lesson-1-intro.html">Previous Lesson</a>
+        </div>
+    </nav>
+
+    <main class="lesson-content">
+        <h1>Module 2: HTML Essentials</h1>
+        <p>Welcome to Module 2! Now that we understand how the web works, let's dive into <strong>HTML (HyperText Markup Language)</strong>. HTML is the standard language used to create and structure the content of web pages.</p>
+
+        <h2>Lesson 2: Basic HTML Document Structure</h2>
+        <p>Every HTML document follows a fundamental structure. Think of it like the skeleton of your webpage. Let's break down the essential parts you'll find in almost every HTML file.</p>
+
+        <h3>1. The Document Type Declaration: `<!DOCTYPE html>`</h3>
+        <p>The very first line in any HTML document should be the <strong>DOCTYPE declaration</strong>.</p>
+        <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+        <ul>
+            <li><strong>Purpose:</strong> This tells the web browser which version of HTML the page is written in. For modern web development (HTML5), this specific declaration (`<!DOCTYPE html>`) is all you need.</li>
+            <li><strong>Not an HTML Tag:</strong> It's an instruction for the browser about the document type.</li>
+            <li><strong>Importance:</strong> Including this ensures the browser renders the page in "standards mode," following the latest web standards, which leads to more predictable and consistent results across different browsers. Without it, browsers might enter "quirks mode," trying to emulate older, buggier browser behavior, which you generally want to avoid.</li>
+            <li><strong>Placement:</strong> It MUST be the very first thing in your HTML file, before the `<html>` tag.</li>
+        </ul>
+
+        <h3>2. The Root Element: `<html>`</h3>
+        <p>Immediately after the DOCTYPE declaration comes the <strong>`<html>` element</strong>. This element wraps all the content on the entire page.</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;!-- All other page content goes here --&gt;
+&lt;/html&gt;</code></pre>
+        <ul>
+            <li><strong>Role:</strong> It acts as the root container for the entire HTML document.</li>
+            <li><strong>Attributes:</strong> Often includes the `lang` attribute to specify the primary language of the document's content, which helps search engines and assistive technologies (like screen readers). For English, you'd use:
+                <pre><code>&lt;html lang="en"&gt;</code></pre>
+            </li>
+        </ul>
+
+        <h3>3. The Head Element: `<head>`</h3>
+        <p>Inside the `<html>` element, the first main section is the <strong>`<head>` element</strong>. This section contains meta-information about the HTML document that is <em>not</em> directly displayed on the webpage itself (with a few exceptions like the `<title>`).</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Web Page Title&lt;/title&gt;
+    &lt;!-- Other meta-info like links to CSS/JS files, descriptions, keywords go here --&gt;
+  &lt;/head&gt;
+  &lt;!-- Body content comes next --&gt;
+&lt;/html&gt;</code></pre>
+        <ul>
+            <li><strong>Content:</strong> Typically includes:
+                <ul>
+                    <li><strong>`<meta>` tags:</strong> Provide metadata like character encoding (`charset="UTF-8"` is essential for displaying text correctly), viewport settings for responsive design, page descriptions, and keywords for SEO.</li>
+                    <li><strong>`<title>` tag:</strong> Defines the title that appears in the browser tab or window title bar, and is also used as the default name for bookmarks. This is required and very important for usability and SEO.</li>
+                    <li><strong>`<link>` tags:</strong> Used to link external resources, most commonly CSS stylesheets (`<link rel="stylesheet" href="style.css">`).</li>
+                    <li><strong>`<style>` tags:</strong> Can contain internal CSS rules (though external stylesheets are generally preferred).</li>
+                    <li><strong>`<script>` tags:</strong> Can link to external JavaScript files or contain internal JavaScript code (often placed near the end of the `<body>` for performance reasons, but can be in the `<head>`).</li>
+                </ul>
+            </li>
+            <li><strong>Visibility:</strong> Content within the `<head>` is processed by the browser but not directly rendered on the visible page area.</li>
+        </ul>
+
+        <h3>4. The Body Element: `<body>`</h3>
+        <p>Following the `<head>` section, still inside the `<html>` element, is the <strong>`<body>` element</strong>. This is where all the visible content of your webpage goes.</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Web Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;This is a Main Heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph of text that users will see.&lt;/p&gt;
+    &lt;!-- All visible content like text, images, links, tables, lists, etc. goes here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <ul>
+            <li><strong>Content:</strong> This includes everything the user sees and interacts with: text, headings, paragraphs, images, links, lists, tables, forms, videos, etc.</li>
+            <li><strong>Structure:</strong> You'll use various HTML tags within the `<body>` to structure and format this content, which we'll cover in upcoming lessons.</li>
+        </ul>
+
+        <h3>Summary: The Basic Boilerplate</h3>
+        <p>Putting it all together, here's the essential boilerplate structure for any modern HTML5 page:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;!-- Link to CSS often goes here --&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Your visible page content goes here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <p>Understanding this structure is the first step to creating well-formed and functional web pages.</p>
+
+        <hr>
+        <p>In the next lesson, we'll start exploring common HTML tags used within the `<body>` to add content like headings and paragraphs.</p>
+
+        <a href="../../web-dev.html#syllabus" class="cta-button" style="margin-right: 1rem;">Back to Syllabus</a>
+        <!-- Add "Next Lesson" link when lesson 3 exists -->
+        <a href="../module-1-intro/lesson-1-intro.html" class="cta-button secondary">Previous Lesson</a>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2024 Ryan's Academy. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
